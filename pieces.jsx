@@ -3,7 +3,7 @@
 function PgLogo({ size = 28, color = "currentColor", word = true, wordColor }) {
   return (
     <div style={{ display: "inline-flex", alignItems: "center", gap: 10, color }}>
-      <img src="landing-pro/logo-mark.svg" alt="" style={{ width: size, height: size }} />
+      <img src="landing-pro/logo.png" alt="" style={{ width: size, height: size }} />
       {word && (
         <span style={{
           fontFamily: '"Plus Jakarta Sans", sans-serif',
