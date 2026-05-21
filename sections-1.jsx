@@ -101,7 +101,7 @@ function HeroPro() {
         padding: "0 clamp(20px, 5vw, 48px)",
         textAlign: "center",
         transform: `translateY(${scrollProg * -80}px)`,
-        opacity: 1 - scrollProg * 0.4,
+        //opacity: 1 - scrollProg * 0.4,
       }}>
         <Reveal>
           <span style={{
