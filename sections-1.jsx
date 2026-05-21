@@ -87,7 +87,7 @@ function HeroPro() {
 
       {/* grid */}
       <div style={{
-        position: "absolute", inset: 0, pointerEvents: "none", opacity: 0.4,
+        position: "absolute", inset: 0, pointerEvents: "none",
         backgroundImage: "linear-gradient(rgba(201,223,138,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(201,223,138,0.06) 1px, transparent 1px)",
         backgroundSize: "80px 80px",
         maskImage: "radial-gradient(ellipse 80% 60% at 50% 50%, #000 30%, transparent)",
@@ -101,7 +101,6 @@ function HeroPro() {
         padding: "0 clamp(20px, 5vw, 48px)",
         textAlign: "center",
         transform: `translateY(${scrollProg * -80}px)`,
-        //opacity: 1 - scrollProg * 0.4,
       }}>
         <Reveal>
           <span style={{
