@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    
+    <linearGradient id="pg-bowl" x1="30" y1="20" x2="170" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9bc555"></stop>
+      <stop offset="0.55" stop-color="#4f9a3a"></stop>
+      <stop offset="1" stop-color="#2f6826"></stop>
+    </linearGradient>
+    
+    <linearGradient id="pg-stem" x1="40" y1="80" x2="100" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f3a35"></stop>
+      <stop offset="1" stop-color="#1a4e44"></stop>
+    </linearGradient>
+    
+    <linearGradient id="pg-mtn-back" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a8c6c4"></stop>
+      <stop offset="1" stop-color="#6a9994"></stop>
+    </linearGradient>
+    <linearGradient id="pg-mtn-mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6c958f"></stop>
+      <stop offset="1" stop-color="#3d6963"></stop>
+    </linearGradient>
+    <linearGradient id="pg-mtn-front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f5a55"></stop>
+      <stop offset="1" stop-color="#163b38"></stop>
+    </linearGradient>
+
+    
+    <clipPath id="pg-bowl-clip">
+      <path d="M 60 14 L 138 14 A 60 60 0 0 1 138 134 L 60 134 Z"></path>
+    </clipPath>
+    
+    <clipPath id="pg-stem-clip">
+      <path d="&#xA;        M 36 14&#xA;        L 60 14&#xA;        L 60 186&#xA;        L 76 186&#xA;        A 28 28 0 0 0 100 158&#xA;        L 100 130&#xA;        L 36 130&#xA;        Z&#xA;      "></path>
+    </clipPath>
+  </defs>
+
+  
+  <path fill="url(#pg-bowl)" d="&#xA;    M 60 14&#xA;    L 138 14&#xA;    A 60 60 0 0 1 138 134&#xA;    L 60 134&#xA;    Z&#xA;  "></path>
+
+  
+  <g clip-path="url(#pg-bowl-clip)">
+    
+    <path fill="url(#pg-mtn-back)" d="&#xA;      M 60 110&#xA;      L 70 95 L 82 105 L 96 88 L 110 102 L 124 92 L 138 102 L 152 88 L 168 102&#xA;      L 168 134 L 60 134 Z&#xA;    "></path>
+    
+    <path fill="url(#pg-mtn-mid)" d="&#xA;      M 60 118&#xA;      L 74 102 L 88 116 L 102 100 L 118 116 L 134 102 L 150 116 L 168 108&#xA;      L 168 134 L 60 134 Z&#xA;    "></path>
+    
+    <path fill="url(#pg-mtn-front)" d="&#xA;      M 60 126&#xA;      L 78 112 L 94 124 L 112 110 L 130 124 L 148 114 L 168 122&#xA;      L 168 134 L 60 134 Z&#xA;    "></path>
+  </g>
+
+  
+  <path fill="url(#pg-stem)" d="&#xA;    M 36 14&#xA;    L 60 14&#xA;    L 60 186&#xA;    L 76 186&#xA;    A 28 28 0 0 0 100 158&#xA;    L 100 130&#xA;    L 60 130&#xA;    L 60 14&#xA;    Z&#xA;  "></path>
+
+  
+  <path fill="#ffffff" d="&#xA;    M 64 130&#xA;    C 64 95  78 64  124 50&#xA;    C 110 80  98 108  88 138&#xA;    C 80 154  70 152  64 142&#xA;    Z&#xA;  "></path>
+  
+  <path d="M 70 140 C 80 110 92 82 116 60" stroke="#7fb05a" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.5"></path>
+</svg>

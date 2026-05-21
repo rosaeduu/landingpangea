@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Pangea — O sistema das ambientais (lab)</title>
+  <link rel="stylesheet" href="landing-pro/colors_and_type.css" />
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml" />
+  <style>
+    html, body { margin: 0; padding: 0; background: var(--g900); }
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    * { box-sizing: border-box; }
+    a { color: inherit; }
+    button { font-family: inherit; }
+
+    /* smooth scroll for anchors */
+    html { scroll-behavior: smooth; }
+
+    /* marquee + pulse + float keyframes */
+    @keyframes pg-marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @keyframes pg-pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50%      { transform: scale(1.3); opacity: 0.6; }
+    }
+    @keyframes pg-float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+    @keyframes pg-scroll-hint {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* selection */
+    ::selection { background: rgba(201,223,138,0.4); color: #0b1a0b; }
+
+    /* scrollbar (webkit only) */
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #091508; }
+    ::-webkit-scrollbar-thumb { background: #1d3f1a; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #2c5d28; }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="landing-pro/hooks.jsx"></script>
+  <script type="text/babel" src="landing-pro/pieces.jsx"></script>
+  <script type="text/babel" src="landing-pro/sections-1.jsx"></script>
+  <script type="text/babel" src="landing-pro/sections-2.jsx"></script>
+
+  <script type="text/babel">
+    function App() {
+      return (
+        <div data-screen-label="Landing Pangea Pro">
+          <NavPro />
+          <HeroPro />
+          <MarqueeStrip />
+          <AntesDepois />
+          <BentoGrid />
+          <ProductTour />
+          <CountersSection />
+          <CTAFinalPro />
+          <FooterPro />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>

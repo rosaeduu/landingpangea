@@ -1,0 +1,277 @@
+/* =============================================================
+   Pangea — Colors & Type
+   Single source for design tokens (primitives + semantic + type).
+   Import once: <link rel="stylesheet" href="colors_and_type.css">
+   ============================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap");
+
+/* ---------- 1. Primitives (camada 1) — never use directly in components ---------- */
+:root {
+  /* Verde — paleta principal */
+  --g900: #234d20; /* hero, sidebar, CTA forte */
+  --g700: #36802d; /* botões, links, destaque */
+  --g500: #77ab59; /* ícones, badges, apoio */
+  --g200: #c9df8a; /* separadores, hover suave */
+  --g50:  #f0f7da; /* backgrounds de seção */
+
+  /* Neutros quentes — grayscale com leve viés verde */
+  --n900: #1a1f16; /* texto principal */
+  --n700: #3a4035; /* texto secundário forte */
+  --n500: #6b7566; /* texto secundário, metadados */
+  --n300: #c4cbbf; /* bordas */
+  --n100: #f4f6f1; /* fundo da página */
+  --n50:  #fafbf7; /* zebra row */
+  --white: #ffffff;
+}
+
+/* ---------- 2. Semantic tokens (camada 2) — light ---------- */
+:root {
+  /* Surface */
+  --color-bg-page:        var(--n100);
+  --color-bg-surface:     #ffffff;
+  --color-bg-elevated:    #ffffff;
+  --color-bg-muted:       var(--g50);
+  --color-bg-subtle:      var(--n50);
+
+  /* Border */
+  --color-border:         var(--n300);
+  --color-border-strong:  #a8b3a3;
+  --color-border-focus:   var(--g700);
+
+  /* Text */
+  --color-text-primary:   var(--n900);
+  --color-text-secondary: #4a5446;
+  --color-text-tertiary:  var(--n500);
+  --color-text-muted:     #8a958a;
+  --color-text-on-primary:#ffffff;
+  --color-text-link:      var(--g700);
+
+  /* Action */
+  --color-primary:        var(--g700);
+  --color-primary-hover:  var(--g900);
+  --color-primary-active: #1d3f1a;
+
+  /* Status — pastel always */
+  --color-success-bg:     #f0fdf4;
+  --color-success-text:   #15803d;
+  --color-success-border: #bbf7d0;
+  --color-danger-bg:      #fef2f2;
+  --color-danger-text:    #b91c1c;
+  --color-danger-border:  #fecaca;
+  --color-warning-bg:     #fefce8;
+  --color-warning-text:   #92400e;
+  --color-warning-border: #fde68a;
+  --color-info-bg:        #eff6ff;
+  --color-info-text:      #1d4ed8;
+  --color-info-border:    #bfdbfe;
+
+  --color-focus-ring:     var(--g700);
+
+  /* Sidebar — dark by default in light mode (institutional) */
+  --color-sidebar-bg:        var(--g900);     /* #234d20 */
+  --color-sidebar-fg:        var(--g200);     /* #c9df8a — item inativo (texto colorido) */
+  --color-sidebar-fg-strong: #ffffff;          /* item ativo */
+  --color-sidebar-fg-muted:  #8aa085;          /* legenda do perfil */
+  --color-sidebar-fg-section:var(--g500);     /* #77ab59 — seção (label de grupo) */
+  --color-sidebar-border:    #1d3f1a;
+  --color-sidebar-hover-bg:  #1d3f1a;
+  --color-sidebar-active-bg: #2c5d28;
+  --color-sidebar-active-bar:var(--g200);     /* barra ativa = mesma cor do texto inativo, p/ coesão */
+  --color-sidebar-badge-bg:  #1d3f1a;
+}
+
+/* ---------- 2b. Semantic tokens — dark · verde profundo (default dark) ---------- */
+[data-theme="dark"], [data-theme="dark-green"] {
+  --color-bg-page:        #0b1a0b;
+  --color-bg-surface:     #13301a;
+  --color-bg-elevated:    #1a3a22;
+  --color-bg-muted:       #0f2615;
+  --color-bg-subtle:      #091508;
+
+  --color-border:         #1f3a1f;
+  --color-border-strong:  #2d5230;
+  --color-border-focus:   #c9df8a;
+
+  --color-text-primary:   #ffffff;
+  --color-text-secondary: #d4e0c8;
+  --color-text-tertiary:  #8aa085;
+  --color-text-muted:     #6b8068;
+  --color-text-on-primary:#0b1a0b;
+  --color-text-link:      #c9df8a;
+
+  --color-primary:        #c9df8a;
+  --color-primary-hover:  #d8ea9f;
+  --color-primary-active: #e2f0b3;
+
+  --color-success-bg:     #0f2418;
+  --color-success-text:   #86efac;
+  --color-success-border: #1f4a30;
+  --color-danger-bg:      #2a1414;
+  --color-danger-text:    #fca5a5;
+  --color-danger-border:  #5a2424;
+  --color-warning-bg:     #2a1f0a;
+  --color-warning-text:   #fcd34d;
+  --color-warning-border: #5a4214;
+  --color-info-bg:        #0f1d2a;
+  --color-info-text:      #93c5fd;
+  --color-info-border:    #1e3a5a;
+
+  --color-focus-ring:     #c9df8a;
+}
+
+/* ---------- 2c. Semantic tokens — dark · marrom terra ---------- */
+[data-theme="dark-earth"] {
+  --color-bg-page:        #1a120b;
+  --color-bg-surface:     #2b1d12;
+  --color-bg-elevated:    #36251a;
+  --color-bg-muted:       #22170e;
+  --color-bg-subtle:      #140d07;
+
+  --color-border:         #3a2a1d;
+  --color-border-strong:  #5a4530;
+  --color-border-focus:   #d4b78a;
+
+  --color-text-primary:   #ffffff;
+  --color-text-secondary: #e0d2bc;
+  --color-text-tertiary:  #a08a6f;
+  --color-text-muted:     #806d57;
+  --color-text-on-primary:#1a120b;
+  --color-text-link:      #d4b78a;
+
+  --color-primary:        #d4b78a;
+  --color-primary-hover:  #e2c89d;
+  --color-primary-active: #ecd4ad;
+
+  --color-success-bg:     #1a2a14;
+  --color-success-text:   #a8d090;
+  --color-success-border: #2d4a25;
+  --color-danger-bg:      #2a1414;
+  --color-danger-text:    #f0a890;
+  --color-danger-border:  #5a2a20;
+  --color-warning-bg:     #2a1f0a;
+  --color-warning-text:   #e8c060;
+  --color-warning-border: #5a4214;
+  --color-info-bg:        #1a2230;
+  --color-info-text:      #a8c0e0;
+  --color-info-border:    #2d3a55;
+
+  --color-focus-ring:     #d4b78a;
+}
+
+/* ---------- 3. Type primitives ---------- */
+:root {
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body:    "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale */
+  --text-xs:   12px; --lh-xs:  16px;
+  --text-sm:   14px; --lh-sm:  20px;
+  --text-base: 16px; --lh-base:24px;
+  --text-lg:   18px; --lh-lg:  28px;
+  --text-xl:   20px; --lh-xl:  28px;
+  --text-2xl:  24px; --lh-2xl: 32px;
+  --text-3xl:  30px; --lh-3xl: 36px;
+  --text-4xl:  40px; --lh-4xl: 48px;
+
+  /* Spacing scale (4px base) */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* Radius */
+  --radius-sm:   4px;
+  --radius:      6px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  20px;
+  --radius-full: 9999px;
+
+  /* Shadow (light) */
+  --shadow-sm:  0 1px 2px 0 rgba(26, 31, 22, 0.04), 0 1px 1px 0 rgba(26, 31, 22, 0.03);
+  --shadow-md:  0 4px 8px -2px rgba(26, 31, 22, 0.06), 0 2px 4px -2px rgba(26, 31, 22, 0.04);
+  --shadow-lg:  0 12px 24px -6px rgba(26, 31, 22, 0.10), 0 4px 8px -4px rgba(26, 31, 22, 0.06);
+  --shadow-xl:  0 24px 48px -12px rgba(26, 31, 22, 0.18);
+
+  /* Z scale */
+  --z-base: 0; --z-dropdown: 20; --z-sticky: 30;
+  --z-drawer: 40; --z-modal: 50; --z-toast: 60; --z-tooltip: 70;
+}
+
+/* ---------- 4. Semantic type styles ---------- */
+.h1, h1.pg {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl); line-height: var(--lh-3xl);
+  font-weight: 700; letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+.h2, h2.pg {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl); line-height: var(--lh-2xl);
+  font-weight: 700; letter-spacing: -0.015em;
+  color: var(--color-text-primary);
+}
+.h3, h3.pg {
+  font-family: var(--font-display);
+  font-size: var(--text-xl); line-height: var(--lh-xl);
+  font-weight: 600; letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+.h4, h4.pg {
+  font-family: var(--font-display);
+  font-size: var(--text-lg); line-height: var(--lh-lg);
+  font-weight: 600; letter-spacing: -0.005em;
+  color: var(--color-text-primary);
+}
+.body, p.pg {
+  font-family: var(--font-body);
+  font-size: var(--text-base); line-height: var(--lh-base);
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+.body-sm {
+  font-family: var(--font-body);
+  font-size: var(--text-sm); line-height: var(--lh-sm);
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--text-xs); line-height: var(--lh-xs);
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+}
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 10px; line-height: 14px;
+  font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 5. Base reset for design system pages ---------- */
+.pg-page {
+  font-family: var(--font-body);
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
